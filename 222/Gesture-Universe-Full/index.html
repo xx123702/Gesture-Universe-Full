@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Gesture Universe — 用双手探索数字宇宙。">
+  <title>Gesture Universe — Move beyond the screen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Gesture Universe home">
+      <span class="brand-mark"><span></span><span></span><span></span></span>
+      <span>GESTURE<span class="brand-light"> UNIVERSE</span></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#experience">体验</a><a href="#gestures">手势指南</a><a href="#about">关于项目</a>
+    </nav>
+    <button class="button button-small button-outline" id="navLaunch">启动体验 <span>↗</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> INTERACTIVE WEB EXPERIMENT / 001</div>
+        <h1>Move beyond<br><span class="gradient-text">the screen.</span></h1>
+        <p class="hero-lede">让你的双手成为新的界面。伸展、捏合、移动——用自然的动作，探索一个会回应你的数字宇宙。</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="heroLaunch">进入手势宇宙 <span>↗</span></button>
+          <a class="text-link" href="#gestures">了解如何操作 <span>↓</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>01</strong><span>CAMERA / OPTIONAL</span></div>
+          <div><strong>03</strong><span>CORE GESTURES</span></div>
+          <div><strong>∞</strong><span>WAYS TO EXPLORE</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="动态星球视觉">
+        <div class="art-grid"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="planet-halo"></div>
+        <div class="planet"><div class="planet-shade"></div><div class="planet-line line-a"></div><div class="planet-line line-b"></div></div>
+        <div class="moon moon-a"></div><div class="moon moon-b"></div>
+        <div class="float-label label-top"><span class="label-dot cyan"></span> GESTURE DETECTED</div>
+        <div class="float-label label-bottom"><span class="signal-bars"><i></i><i></i><i></i></span> SYSTEM ONLINE</div>
+        <div class="art-coordinate">34° 03' 08.4"N<br>118° 14' 37.2"W</div>
+        <div class="art-index">FIG. 001 — A NEW INTERFACE</div>
+      </div>
+    </section>
+
+    <section class="experience-section section-shell" id="experience">
+      <div class="section-heading">
+        <div><div class="eyebrow">LIVE PLAYGROUND / 01</div><h2>Your hands.<br><span class="gradient-text">Your universe.</span></h2></div>
+        <p>移动鼠标即可体验互动粒子。开启摄像头后，可以尝试真实手势识别。摄像头只在你主动启动后使用。</p>
+      </div>
+      <div class="playground" id="playground">
+        <canvas id="particleCanvas" aria-label="可交互粒子宇宙"></canvas>
+        <div class="playground-vignette"></div>
+        <div class="playground-topline"><span><i class="live-dot"></i> LIVE PLAYGROUND</span><span id="modePill">MOUSE MODE</span></div>
+        <div class="playground-center" id="playgroundHint">
+          <div class="hand-symbol">✳</div>
+          <h3>Make a little universe.</h3>
+          <p>移动光标，观察粒子如何跟随你的动作。</p>
+        </div>
+        <div class="playground-bottomline">
+          <div class="gesture-status"><span class="status-ring"></span><div><small>DETECTED GESTURE</small><strong id="gestureStatus">等待动作</strong></div></div>
+          <div class="playground-controls">
+            <button class="control-button" id="cameraButton"><span>◎</span> 开启摄像头</button>
+            <button class="control-button" id="resetButton"><span>↻</span> 重置粒子</button>
+            <button class="control-button" id="burstButton"><span>✦</span> 星尘爆发</button>
+          </div>
+        </div>
+        <video id="cameraVideo" playsinline muted></video>
+        <div class="camera-preview-wrap" id="cameraPreviewWrap" hidden><video id="cameraPreview" playsinline muted></video><span>CAMERA PREVIEW</span></div>
+        <div class="playground-toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+      <div class="playground-footnote"><span>TIP: PINCH TO FOCUS · OPEN PALM TO EXPAND</span><span>CAMERA ACCESS REQUIRES YOUR PERMISSION</span></div>
+    </section>
+
+    <section class="gestures-section section-shell" id="gestures">
+      <div class="section-heading compact">
+        <div><div class="eyebrow">LEARN THE LANGUAGE / 02</div><h2>Three gestures.<br><span class="gradient-text">Infinite possibility.</span></h2></div>
+        <p>从简单的手势开始。每个动作都是你与数字空间交流的一种方式。</p>
+      </div>
+      <div class="gesture-grid">
+        <article class="gesture-card card-cyan">
+          <div class="card-top"><span>GESTURE / 01</span><span class="card-icon">↗</span></div>
+          <div class="gesture-illustration palm-illustration"><div class="palm-shape"><i></i><i></i><i></i><i></i><b></b></div><span class="illustration-orbit"></span></div>
+          <h3>Open palm</h3><p>张开手掌，释放粒子。让宇宙向外扩展，感受空间的呼吸。</p>
+          <div class="card-footer"><span class="mini-dot"></span> EXPAND / RELEASE</div>
+        </article>
+        <article class="gesture-card card-violet">
+          <div class="card-top"><span>GESTURE / 02</span><span class="card-icon">⌕</span></div>
+          <div class="gesture-illustration pinch-illustration"><div class="pinch-ring"></div><div class="pinch-point"></div><span class="pinch-rays"></span></div>
+          <h3>Pinch to focus</h3><p>拇指与食指轻轻捏合，聚焦粒子。越靠近，细节越清晰。</p>
+          <div class="card-footer"><span class="mini-dot"></span> FOCUS / ATTRACT</div>
+        </article>
+        <article class="gesture-card card-pink">
+          <div class="card-top"><span>GESTURE / 03</span><span class="card-icon">⌁</span></div>
+          <div class="gesture-illustration move-illustration"><div class="move-orb"></div><div class="move-trail"></div><div class="move-arrow">↗</div></div>
+          <h3>Move to explore</h3><p>移动手掌，穿越星尘。你的动作会改变粒子的方向与轨迹。</p>
+          <div class="card-footer"><span class="mini-dot"></span> MOVE / EXPLORE</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-section section-shell" id="about">
+      <div class="how-panel">
+        <div class="how-copy"><div class="eyebrow">GET STARTED / 03</div><h2>A new way<br>to <span class="gradient-text">interact.</span></h2><p>无需下载应用，也无需特殊设备。打开网页，允许摄像头访问，就可以开始探索。</p><button class="button button-primary" id="howLaunch">开始探索 <span>↗</span></button></div>
+        <div class="steps">
+          <div class="step"><span class="step-number">01</span><div><h3>Open the experience</h3><p>点击启动体验，进入互动区域。</p></div><span class="step-symbol">↗</span></div>
+          <div class="step"><span class="step-number">02</span><div><h3>Allow camera access</h3><p>选择允许，系统开始识别你的手部动作。</p></div><span class="step-symbol">◎</span></div>
+          <div class="step"><span class="step-number">03</span><div><h3>Move naturally</h3><p>张开手掌、捏合手指，看看宇宙如何回应。</p></div><span class="step-symbol">✳</span></div>
+        </div>
+        <div class="panel-orb"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell">
+    <a class="brand" href="#home"><span class="brand-mark"><span></span><span></span><span></span></span><span>GESTURE<span class="brand-light"> UNIVERSE</span></span></a>
+    <p>A small experiment in human-computer interaction.</p>
+    <span class="footer-code">BUILT FOR CURIOUS HANDS · 2026</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
