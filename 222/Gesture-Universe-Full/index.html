@@ -96,20 +96,35 @@
 
     <section class="experience-section section-shell" id="experience">
       <div class="section-heading">
-        <div><div class="eyebrow">LIVE PLAYGROUND / 01</div><h2>Your hands.<br><span class="gradient-text">Your universe.</span></h2></div>
+        <div>
+          <div class="eyebrow">LIVE PLAYGROUND / 01</div>
+          <h2>
+            Your hands.<br>
+            <span class="gradient-text">Your universe.</span>
+          </h2>
+        </div>
         <p>移动鼠标即可体验互动粒子。开启摄像头后，可以尝试真实手势识别。摄像头只在你主动启动后使用。</p>
       </div>
       <div class="playground" id="playground">
         <canvas id="particleCanvas" aria-label="可交互粒子宇宙"></canvas>
         <div class="playground-vignette"></div>
-        <div class="playground-topline"><span><i class="live-dot"></i> LIVE PLAYGROUND</span><span id="modePill">MOUSE MODE</span></div>
+        <div class="playground-topline">
+          <span><i class="live-dot"></i> LIVE PLAYGROUND</span>
+          <span id="modePill">MOUSE MODE</span>
+        </div>
         <div class="playground-center" id="playgroundHint">
           <div class="hand-symbol">✳</div>
           <h3>Make a little universe.</h3>
           <p>移动光标，观察粒子如何跟随你的动作。</p>
         </div>
         <div class="playground-bottomline">
-          <div class="gesture-status"><span class="status-ring"></span><div><small>DETECTED GESTURE</small><strong id="gestureStatus">等待动作</strong></div></div>
+          <div class="gesture-status">
+            <span class="status-ring"></span>
+            <div>
+              <small>DETECTED GESTURE</small>
+              <strong id="gestureStatus">等待动作</strong>
+            </div>
+          </div>
           <div class="playground-controls">
             <button class="control-button" id="cameraButton"><span>◎</span> 开启摄像头</button>
             <button class="control-button" id="resetButton"><span>↻</span> 重置粒子</button>
@@ -117,35 +132,82 @@
           </div>
         </div>
         <video id="cameraVideo" playsinline muted></video>
-        <div class="camera-preview-wrap" id="cameraPreviewWrap" hidden><video id="cameraPreview" playsinline muted></video><span>CAMERA PREVIEW</span></div>
+        <div class="camera-preview-wrap" id="cameraPreviewWrap" hidden>
+          <video id="cameraPreview" playsinline muted></video>
+          <span>CAMERA PREVIEW</span>
+        </div>
         <div class="playground-toast" id="toast" role="status" aria-live="polite"></div>
       </div>
-      <div class="playground-footnote"><span>TIP: PINCH TO FOCUS · OPEN PALM TO EXPAND</span><span>CAMERA ACCESS REQUIRES YOUR PERMISSION</span></div>
+      <div class="playground-footnote">
+        <span>TIP: PINCH TO FOCUS · OPEN PALM TO EXPAND</span>
+        <span>CAMERA ACCESS REQUIRES YOUR PERMISSION</span>
+      </div>
     </section>
 
     <section class="gestures-section section-shell" id="gestures">
       <div class="section-heading compact">
-        <div><div class="eyebrow">LEARN THE LANGUAGE / 02</div><h2>Three gestures.<br><span class="gradient-text">Infinite possibility.</span></h2></div>
+        <div>
+          <div class="eyebrow">LEARN THE LANGUAGE / 02</div>
+          <h2>
+            Three gestures.<br>
+            <span class="gradient-text">Infinite possibility.</span>
+          </h2>
+        </div>
         <p>从简单的手势开始。每个动作都是你与数字空间交流的一种方式。</p>
       </div>
       <div class="gesture-grid">
         <article class="gesture-card card-cyan">
-          <div class="card-top"><span>GESTURE / 01</span><span class="card-icon">↗</span></div>
-          <div class="gesture-illustration palm-illustration"><div class="palm-shape"><i></i><i></i><i></i><i></i><b></b></div><span class="illustration-orbit"></span></div>
-          <h3>Open palm</h3><p>张开手掌，释放粒子。让宇宙向外扩展，感受空间的呼吸。</p>
-          <div class="card-footer"><span class="mini-dot"></span> EXPAND / RELEASE</div>
+          <div class="card-top">
+            <span>GESTURE / 01</span>
+            <span class="card-icon">↗</span>
+          </div>
+          <div class="gesture-illustration palm-illustration">
+            <div class="palm-shape">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <b></b>
+            </div>
+            <span class="illustration-orbit"></span>
+          </div>
+          <h3>Open palm</h3>
+          <p>张开手掌，释放粒子。让宇宙向外扩展，感受空间的呼吸。</p>
+          <div class="card-footer">
+            <span class="mini-dot"></span> EXPAND / RELEASE
+          </div>
         </article>
         <article class="gesture-card card-violet">
-          <div class="card-top"><span>GESTURE / 02</span><span class="card-icon">⌕</span></div>
-          <div class="gesture-illustration pinch-illustration"><div class="pinch-ring"></div><div class="pinch-point"></div><span class="pinch-rays"></span></div>
-          <h3>Pinch to focus</h3><p>拇指与食指轻轻捏合，聚焦粒子。越靠近，细节越清晰。</p>
-          <div class="card-footer"><span class="mini-dot"></span> FOCUS / ATTRACT</div>
+          <div class="card-top">
+            <span>GESTURE / 02</span>
+            <span class="card-icon">⌕</span>
+          </div>
+          <div class="gesture-illustration pinch-illustration">
+            <div class="pinch-ring"></div>
+            <div class="pinch-point"></div>
+            <span class="pinch-rays"></span>
+          </div>
+          <h3>Pinch to focus</h3>
+          <p>拇指与食指轻轻捏合，聚焦粒子。越靠近，细节越清晰。</p>
+          <div class="card-footer">
+            <span class="mini-dot"></span> FOCUS / ATTRACT
+          </div>
         </article>
         <article class="gesture-card card-pink">
-          <div class="card-top"><span>GESTURE / 03</span><span class="card-icon">⌁</span></div>
-          <div class="gesture-illustration move-illustration"><div class="move-orb"></div><div class="move-trail"></div><div class="move-arrow">↗</div></div>
-          <h3>Move to explore</h3><p>移动手掌，穿越星尘。你的动作会改变粒子的方向与轨迹。</p>
-          <div class="card-footer"><span class="mini-dot"></span> MOVE / EXPLORE</div>
+          <div class="card-top">
+            <span>GESTURE / 03</span>
+            <span class="card-icon">⌁</span>
+          </div>
+          <div class="gesture-illustration move-illustration">
+            <div class="move-orb"></div>
+            <div class="move-trail"></div>
+            <div class="move-arrow">↗</div>
+          </div>
+          <h3>Move to explore</h3>
+          <p>移动手掌，穿越星尘。你的动作会改变粒子的方向与轨迹。</p>
+          <div class="card-footer">
+            <span class="mini-dot"></span> MOVE / EXPLORE
+          </div>
         </article>
       </div>
     </section>
